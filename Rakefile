@@ -8,3 +8,11 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+begin
+	require 'rubygems'
+	require 'vlad'
+	Vlad.load :scm => :git
+rescue LoadError => e
+	puts "There is some problem with Vlad #{e}."
+end
