@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= stylesheet_link_tag 'style' %>
+
+	<title>Pastehost</title>
+</head>
+
+<body>
+  <h1><a href="/"><span>Pastehost!</span></a></h1>
+
+  <div id="content_container">
+    <div id="content">
+      <%= yield %>
+
+			<p class="bookmarklet">Drag this <a class="bookmarklet" href="javascript:(function(){var text=window.getSelection ? window.getSelection().toString() : (document.selection?document.selection.createRange().text : '');if(text.length){window.open('http://pastehost.com/api/paste?p='+encodeURIComponent(text)+'&amp;u='+encodeURIComponent(location.href));}else{alert('Select some text on this page first.')}})();">Pastehost It!</a> bookmarklet to your Bookmarks Bar (in IE, right-click it and choose Add to Favorites)!</p>
+    </div>
+
+    <div id="content_end">&nbsp;</div>
+  </div>
+
+  <div id="footer">
+    <p>Site design Copyright (c) 2009 Aaron Bieber</p>
+    <p>User-contributed content is the sole property and responsibility of the contributor or author</p>
+  </div>
+</body>
+</html>
