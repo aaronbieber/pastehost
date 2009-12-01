@@ -2,3 +2,14 @@
 
 Pastehost.com is to text clipping what imgur.com is to social image sharing.
 Share a snippet of text with someone, or the world.
+
+== Deploying Pastehost.com
+
+Install prerequisites:
+
+ - Probably a good idea to install Rails, though it's frozen in /vendor (at
+   2.3.5 at the time of this writing)
+ - RedCloth (gem install RedCloth)
+ - Sanitize (gem install sanitize)
+   - Sanitize requires libxml2 (apt-get install libxml2-dev)
+   - Sanitize also requires libxslt (apt-get install libxslt-dev)
