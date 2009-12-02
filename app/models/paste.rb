@@ -16,7 +16,7 @@ class Paste < ActiveRecord::Base
 
 		# Allow raw URLs to be links
 		p.gsub!(/\swww\./, ' http://www.')
-		p.gsub!(/((?:https?:\/\/)[a-z0-9$_.+'()-]*)/, '"\1":\1')
+		p.gsub!(/([^:])((?:https?:\/\/)[a-z0-9$_.+'()-]*)/, '\1"\2":\2')
 
     r = RedCloth.new p
     r = r.to_html
