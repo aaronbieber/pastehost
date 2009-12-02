@@ -8,7 +8,7 @@
   </ul>
 <% end %>
 
-<% form_tag 'paste' do %>
+<% form_tag '/paste' do %>
   <%= text_area 'paste', 'paste', { :rows => 10, :class => 'field' } %>
   <div style="float: right;"><%= check_box 'paste', 'private', { :id => 'p_check' } %><label for="p_check" title="Private posts don't appear on the random page.">This paste is private (<em>ssshh</em>)</label></div>
   <%= submit_tag 'Save' %>
