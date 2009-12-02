@@ -16,7 +16,7 @@
     <div id="content">
       <%= yield %>
 
-			<p class="bookmarklet">Drag this <a class="bookmarklet" href="javascript:(function(){var text=window.getSelection ? window.getSelection().toString() : (document.selection?document.selection.createRange().text : '');if(text.length){window.open('http://pastehost.com/api/paste?p='+encodeURIComponent(text)+'&amp;u='+encodeURIComponent(location.href));}else{alert('Select some text on this page first.')}})();">Pastehost It!</a> bookmarklet to your Bookmarks Bar (in IE, right-click it and choose Add to Favorites)!</p>
+			<p class="bookmarklet">Drag this <a class="bookmarklet" href="javascript:(function(){var text=window.getSelection ? window.getSelection().toString() : (document.selection?document.selection.createRange().text : '');if(text.length){window.open('http://pastehost.com/api/edit?p='+encodeURIComponent(text)+'&amp;u='+encodeURIComponent(location.href));}else{alert('Select some text on this page first.')}})();">Pastehost It!</a> bookmarklet to your Bookmarks Bar (in IE, right-click it and choose Add to Favorites)!</p>
     </div>
 
     <div id="content_end">&nbsp;</div>
