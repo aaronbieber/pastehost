@@ -96,8 +96,8 @@ div#paste p {
 
 div#paste blockquote {
   border-left: 2px solid #9b8c6f;
-  margin: 10px 0 10px 20px;
-  padding: 10px 0 1px 10px;
+  margin: 0 0 10px 20px;
+  padding: 0 0 1px 10px;
 }
 
 div#paste blockquote p {
