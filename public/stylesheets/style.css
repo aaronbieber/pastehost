@@ -112,6 +112,12 @@ div#paste_meta {
   color: #9b8c6f;
 }
 
+div.preview_paste {
+  background: transparent url('/images/line.gif') no-repeat left bottom;
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+}
+
 div#button_bar a.paste {
   display: block;
   margin: 0 auto;

@@ -9,15 +9,21 @@ class MainController < ApplicationController
 	end
 
   def paste
+    @preview = false
     @paste = Paste.new
 
     if request.post?
       @paste = Paste.new(params[:paste])
-      @paste.setup
-      @paste.ip = request.remote_ip
-      if @paste.valid?
-        @paste.save
-        redirect_to :controller => 'main', :action => 'view', :code => @paste.code
+
+      if params.has_key?(:commit) and params[:commit] == 'Save'
+        @paste.setup
+        @paste.ip = request.remote_ip
+        if @paste.valid?
+          @paste.save
+          redirect_to :controller => 'main', :action => 'view', :code => @paste.code
+        end
+      else
+        @preview = true
       end
     end
   end
