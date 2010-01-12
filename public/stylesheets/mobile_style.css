@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  background: #657b9b url('/images/iphone/pinstripes.png') repeat left top;
+  width: 320px;
+}
+
+a {
+	color: #3A567F;
+}
+
+h1 span {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+  height: 43px;
+  background: transparent url('/images/iphone/iPhoneToolbar.png') repeat-x left top;
+}
+
+h1 a {
+  text-decoration: none;
+  /*
+  display: block;
+  width: 320px;
+  height: 100px;
+  margin: 0 auto;
+  */
+}
+
+div#content_container {
+  /*background: transparent url('/images/paste_back.gif') repeat-y right top;*/
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 1px 0 0;
+}
+
+div#content {
+  padding: 0 10px;
+}
+
+div#content label {
+  font-size: 1.3em;
+}
+
+div#content a.bookmarklet {
+	padding: 3px;
+	border: 1px solid;
+	border-left-color: #B3BECC;
+	border-top-color: #B3BECC;
+	border-right-color: #47576D;
+	border-bottom-color: #47576D;
+	text-decoration: none;
+	color: #B3BECC;
+	background-color: #657B9B;
+	font-weight: bold;
+}
+
+div#content p.bookmarklet {
+  /*background: transparent url('/images/line.gif') no-repeat 50% 0;*/
+	margin: 20px 0 0 0;
+	padding: 10px 0 0 0;
+	text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.2em;
+}
+
+div#content_end {
+  margin: 0;
+  padding: 0;
+  /*background: transparent url('/images/paste_bottom.gif') no-repeat left top;*/
+  width: 320px;
+  height: 50px;
+}
+
+div#footer {
+  width: 320px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  color: #9dabbf;
+}
+
+div#footer p {
+  margin: 0 0 3px 0;
+}
+
+div#paste {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.6em;
+}
+
+div#paste p {
+  margin: 0 0 10px 0;
+}
+
+div#paste blockquote {
+  border-left: 2px solid #9b8c6f;
+  margin: 0 0 10px 20px;
+  padding: 0 0 1px 10px;
+}
+
+div#paste blockquote p {
+}
+
+div#paste_meta {
+  /*background: transparent url('/images/line.gif') no-repeat top left;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 10px 0 0 0;
+  padding: 0.7em 0 0 5px;
+  font-size: 1.3em;
+  color: #9b8c6f;
+}
+
+div.preview_paste {
+  /*background: transparent url('/images/line.gif') no-repeat left bottom;*/
+  padding: 0 0 10px 0;
+  margin: 0 0 10px 0;
+}
+
+div#button_bar a.paste {
+  display: block;
+  margin: 0 auto;
+  /*background: transparent url('/images/paste_something_button.gif') no-repeat top left;*/
+  width: 150px;
+  height: 34px;
+}
+
+div#button_bar a.paste span {
+  display: none;
+}
+
+div#button_bar a.random {
+  font-size: 1.3em;
+  display: block;
+  float: right;
+  background: transparent url('/images/die.gif') no-repeat 0 50%;
+  height: 30px;
+  width: 70px;
+  padding: 15px 0 0 35px;
+}
+
+div#hello p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.8em;
+  margin: 0 30px;
+  padding: 0 0 1.5em 0;
+  line-height: 1.5em;
+}
+
+h2.paste_something_and_share_it {
+  margin: 0 0 15px 0;
+  padding: 0;
+  /*background: url('/images/paste_something_and_share_it.gif') no-repeat 50% 0;*/
+  height: 56px;
+}
+
+h2.paste_something_anything {
+  margin: 0 0 15px 0;
+  padding: 0;
+  /*background: url('/images/paste_something_heading.gif') no-repeat top left;*/
+  height: 22px;
+}
+
+h2 span {
+  display: none;
+}
+
+textarea.field {
+  border: 1px solid #9b8c6f;
+  width: 300px;
+  padding: 5px;
+}
+
+ul.errors {
+  list-style-type: none;
+  margin: 0 0 10px 10px;
+  padding: 0;
+}
+
+ul.errors li {
+  margin: 0 0 5px 0;
+  padding: 0 0 0 22px;
+  /*background: transparent url('/images/red_arrow.gif') no-repeat top left;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ca4e2f;
+  font-size: 1.3em;
+}
