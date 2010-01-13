@@ -67,3 +67,4 @@ end
 require 'rubygems'
 require 'redcloth'
 require 'sanitize'
+require 'twitter'
