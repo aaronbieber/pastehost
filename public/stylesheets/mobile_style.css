@@ -7,7 +7,7 @@ body {
 }
 
 a {
-	color: #3A567F;
+  color: #3A567F;
 }
 
 h1 span {
@@ -51,25 +51,16 @@ div#content label {
 }
 
 div#content a.bookmarklet {
-	padding: 3px;
-	border: 1px solid;
-	border-left-color: #B3BECC;
-	border-top-color: #B3BECC;
-	border-right-color: #47576D;
-	border-bottom-color: #47576D;
-	text-decoration: none;
-	color: #B3BECC;
-	background-color: #657B9B;
-	font-weight: bold;
-}
-
-div#content p.bookmarklet {
-  /*background: transparent url('/images/line.gif') no-repeat 50% 0;*/
-	margin: 20px 0 0 0;
-	padding: 10px 0 0 0;
-	text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 1.2em;
+  padding: 3px;
+  border: 1px solid;
+  border-left-color: #B3BECC;
+  border-top-color: #B3BECC;
+  border-right-color: #47576D;
+  border-bottom-color: #47576D;
+  text-decoration: none;
+  color: #B3BECC;
+  background-color: #657B9B;
+  font-weight: bold;
 }
 
 div#content_end {
@@ -81,11 +72,11 @@ div#content_end {
 }
 
 div#footer {
-	-webkit-border-radius: 10px;
-	border: 1px solid #aaa;
+  -webkit-border-radius: 10px;
+  border: 1px solid #aaa;
   background-color: white;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 10px 50px 10px;
   font-family: Helvetica, sans-serif;
   font-size: 1.1em;
   text-align: center;
@@ -97,7 +88,7 @@ div#footer p {
 }
 
 div#paste {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Helvetica, sans-serif;
   font-size: 1.6em;
 }
 
@@ -116,7 +107,7 @@ div#paste blockquote p {
 
 div#paste_meta {
   /*background: transparent url('/images/line.gif') no-repeat top left;*/
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Helvetica, sans-serif;
   margin: 10px 0 0 0;
   padding: 0.7em 0 0 5px;
   font-size: 1.3em;
@@ -129,41 +120,61 @@ div.preview_paste {
   margin: 0 0 10px 0;
 }
 
-div#button_bar a.paste {
-  display: block;
-  margin: 0 auto;
-  /*background: transparent url('/images/paste_something_button.gif') no-repeat top left;*/
-  width: 150px;
-  height: 34px;
-}
-
-div#button_bar a.paste span {
-  color: black;
-}
-
 div#button_bar a.random {
-  font-size: 1.3em;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  border-top: 1px solid #aaa;
+  font-size: 1.6em;
+  font-weight: bold;
   display: block;
-  float: right;
-  background: transparent url('/images/die.gif') no-repeat 0 50%;
-  height: 30px;
-  width: 70px;
-  padding: 15px 0 0 35px;
+  padding: 10px;
+  color: black;
+  background: white url('/images/iphone/iPhoneArrowT.png') no-repeat 100% 50%;
+}
+
+div#button_bar a.random:active {
+  background: white url('/images/iphone/iPhoneArrowT_white.png') no-repeat 100% 50%;
+  background-color: #1F55C3;
+  color: white;
+}
+
+div#button_bar a.paste {
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+  border-top: 1px solid #aaa;
+  font-size: 1.6em;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  color: black;
+  background: white url('/images/iphone/iPhoneArrowT.png') no-repeat 100% 50%;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+}
+
+div#button_bar a.paste:active {
+  background: white url('/images/iphone/iPhoneArrowT_white.png') no-repeat 100% 50%;
+  background-color: #1F55C3;
+  color: white;
+}
+
+div#hello {
+  margin: 10px;
 }
 
 div#hello p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.8em;
-  margin: 0 30px;
-  padding: 0 0 1.5em 0;
-  line-height: 1.5em;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+h2 {
+  margin: 0;
 }
 
 h2.paste_something_and_share_it {
-  margin: 0 0 10px 0;
+  margin: 10px;
   padding: 0;
-  /*background: url('/images/paste_something_and_share_it.gif') no-repeat 50% 0;*/
-  height: 56px;
 }
 
 h2.paste_something_anything {
@@ -218,8 +229,7 @@ a.iphone-button {
 }
 
 .panel {
-	-webkit-border-radius: 10px;
-	border: 1px solid #aaa;
+  -webkit-border-radius: 10px;
+  border: 1px solid #aaa;
   background-color: white;
-  padding: 10px;
 }
