@@ -19,12 +19,13 @@ h1 span {
 h1 {
   text-align: center;
   margin: 0 auto;
-  padding: 10px 0 0 0;
+  padding: 8px 0 0 0;
   height: 43px;
   background: transparent url('/images/iphone/iPhoneToolbar.png') repeat-x left top;
 }
 
 h1 a {
+  padding: 2px 0 0 0;
   text-decoration: none;
   /*
   display: block;
@@ -80,12 +81,15 @@ div#content_end {
 }
 
 div#footer {
-  width: 320px;
-  margin: 0 auto;
-  font-family: Helvetica, Arial, sans-serif;
+	-webkit-border-radius: 10px;
+	border: 1px solid #aaa;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  font-family: Helvetica, sans-serif;
   font-size: 1.1em;
   text-align: center;
-  color: #9dabbf;
+  color: #666;
 }
 
 div#footer p {
@@ -134,7 +138,7 @@ div#button_bar a.paste {
 }
 
 div#button_bar a.paste span {
-  display: none;
+  color: black;
 }
 
 div#button_bar a.random {
@@ -156,26 +160,26 @@ div#hello p {
 }
 
 h2.paste_something_and_share_it {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   padding: 0;
   /*background: url('/images/paste_something_and_share_it.gif') no-repeat 50% 0;*/
   height: 56px;
 }
 
 h2.paste_something_anything {
-  margin: 0 0 15px 0;
+  margin: 0 0 5px 0;
   padding: 0;
   /*background: url('/images/paste_something_heading.gif') no-repeat top left;*/
-  height: 22px;
 }
 
 h2 span {
-  display: none;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 textarea.field {
+  width: 265px;
   border: 1px solid #9b8c6f;
-  width: 300px;
   padding: 5px;
 }
 
@@ -192,4 +196,30 @@ ul.errors li {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #ca4e2f;
   font-size: 1.3em;
+}
+
+a.iphone-button {
+  display: block;
+  float: right;
+  -webkit-border-image: url('/images/iphone/iPhoneGoButton.png') 0 5 0 5;
+  -webkit-border-radius: 0;
+  border-width: 0 5px 0 5px;
+  padding: 0px;
+  height: 28px;
+  margin: 0 5px 0 0;
+  line-height: 28px;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+  text-decoration: none;
+  background: none;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.7em;
+}
+
+.panel {
+	-webkit-border-radius: 10px;
+	border: 1px solid #aaa;
+  background-color: white;
+  padding: 10px;
 }

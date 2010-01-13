@@ -26,6 +26,9 @@ class ApplicationController < ActionController::Base
   ]
 
   def detect_browser
+    # Force it for now.
+    return "mobile_application"
+
     agent = request.headers["HTTP_USER_AGENT"].downcase
     MOBILE_BROWSERS.each do |m|
       return "mobile_application" if agent.match(m)

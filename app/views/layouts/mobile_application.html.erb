@@ -7,20 +7,28 @@
   <meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=no" />
   <%= stylesheet_link_tag 'mobile_style' %>
 
+  <script language="javascript" type="text/javascript">
+    addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar() {
+      window.scrollTo(0,1);
+    }
+  </script>
+
 	<title>Pastehost</title>
 </head>
 
 <body>
-  <h1><a href="/"><span>Pastehost!</span></a></h1>
+  <h1>
+    <a href="/"><span>Pastehost!</span></a>
+    <a href="#" onclick="$(this).up('form').submit(); return false;" class="iphone-button">Save</a>
+  </h1>
 
   <div id="content_container">
     <div id="content">
-      <%= yield %>
-
-			<p class="bookmarklet">Drag this <a class="bookmarklet" href="javascript:(function(){var text=window.getSelection ? window.getSelection().toString() : (document.selection?document.selection.createRange().text : '');if(text.length){window.open('http://pastehost.com/api/edit?p='+encodeURIComponent(text)+'&amp;u='+encodeURIComponent(location.href));}else{alert('Select some text on this page first.')}})();">Pastehost It!</a> bookmarklet to your Bookmarks Bar (in IE, right-click it and choose Add to Favorites)!</p>
+      <div class="panel">
+        <%= yield %>
+      </div>
     </div>
-
-    <div id="content_end">&nbsp;</div>
   </div>
 
   <div id="footer">
