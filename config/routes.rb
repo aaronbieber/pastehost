@@ -18,10 +18,10 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/service.wsdl', :action => 'wsdl'
 
   # Install the default route as the lowest priority.
-  #map.connect ':controller/:action/:id.:format'
+  # map.connect ':controller/:action/:id.:format'
   map.connect 'paste', :controller => 'main', :action => 'paste'
   map.connect 'random', :controller => 'main', :action => 'random'
-  map.connect ':controller/:action/:id'
+  map.connect ':controller/:action/:id.:format'
 	map.connect '/:code', :controller => 'main', :action => 'view'
   map.connect '/', :controller => 'main', :action => 'view'
 end

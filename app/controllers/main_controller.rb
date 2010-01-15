@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+  skip_before_filter :set_format, :only => [:paste]
 
 	def view
     if not has_code

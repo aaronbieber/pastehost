@@ -2,9 +2,17 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  # Pick a unique cookie name to distinguish our session data from others'
-  # session :session_key => '_pastehost_session_id'
-  layout :detect_browser
+  before_filter :set_format
+  layout :get_application
+
+  def render_view_for(template, formats)
+    formats.each do |format|
+      logger.info File.join(RAILS_ROOT, 'app/views', template + '.' + format.to_s + '.erb')
+      if File.exists?(File.join(RAILS_ROOT, 'app/views/', template + '.' + format.to_s + '.erb'))
+        render :template => File.join(template + '.' + format.to_s + '.erb')
+      end
+    end
+  end
 
   private
   MOBILE_BROWSERS = [
@@ -25,15 +33,28 @@ class ApplicationController < ActionController::Base
     "treo"
   ]
 
-  def detect_browser
+  def set_format
+    request.format = get_browser_format
+  end
+
+  def get_application
+    (get_browser_format == 'html') ? 'application' : get_browser_format + '_application'
+  end
+
+  def get_browser_format
     # Force it for now.
-    return "mobile_application"
+    return "iphone"
 
     agent = request.headers["HTTP_USER_AGENT"].downcase
+
+    # Check for iPhones first
+    return "iphone" if agent =~ /iphone/i
+
+    # Otherwise, check for all mobile user agents
     MOBILE_BROWSERS.each do |m|
-      return "mobile_application" if agent.match(m)
+      return "mobile" if agent.match(m)
     end
 
-    return "application"
+    return "html"
   end
 end

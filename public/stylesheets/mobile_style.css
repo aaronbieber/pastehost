@@ -4,6 +4,7 @@ body {
   font-size: 62.5%;
   background: #657b9b url('/images/iphone/pinstripes.png') repeat left top;
   width: 320px;
+  min-height: 480px;
 }
 
 a {
