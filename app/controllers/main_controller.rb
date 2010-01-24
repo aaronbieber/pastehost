@@ -1,7 +1,9 @@
 class MainController < ApplicationController
-  skip_before_filter :set_format, :only => [:paste]
+  #skip_before_filter :set_format, :only => [:paste]
 
 	def view
+    logger.info "VIEW"
+    logger.info request.format
     if not has_code
       redirect_to :controller => 'hello'
     else
@@ -26,6 +28,11 @@ class MainController < ApplicationController
       else
         @preview = true
       end
+    end
+
+    respond_to do |format|
+      format.html
+      format.iphone
     end
   end
 
