@@ -1,28 +1,11 @@
-<h2 class="paste_something_anything"><span>Create a New Paste</span></h2>
-
-<% if not @paste.errors.empty? %>
-  <ul class="errors">
-    <% @paste.errors.each do |field,error| %>
-      <li><%= error %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<% if @preview %>
-  <div id="paste" class="preview_paste">
-    <%= @paste.paste %>
-  </div>
-<% end %>
-
-<% form_tag '/paste' do %>
-  <%= text_area 'paste', 'paste', { :rows => 10, :class => 'field' } %>
-  <div style="float: right;"><%= check_box 'paste', 'private', { :id => 'p_check' } %><label for="p_check" title="Private posts don't appear on the random page.">This paste is private (<em>ssshh</em>)</label></div>
-  <!--
-  <%= submit_tag 'Save' %>
-  <%= submit_tag 'Preview' %>
-  -->
-<% end %>
-
-<div id="paste_meta">
-  * Your paste will be formatted with <a target="_blank" href="http://textism.com/tools/textile/">Textile</a>, though <em>some</em> HTML is accepted.
-</div>
+<form method="post" id="pasteForm" class="dialog" action="/paste" target="_self">
+  <fieldset>
+    <h1>Paste</h1>
+    <a class="button leftButton" type="cancel">Cancel</a>
+    <a class="button blueButton" type="submit">Save</a>
+    <div class="row">
+      <%= text_area 'paste', 'paste', { :rows => 8 } %>
+      <input type="hidden" name="commit" value="Save" />
+    </div>
+  </fieldset>
+</form>

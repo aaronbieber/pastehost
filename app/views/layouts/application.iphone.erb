@@ -4,62 +4,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=no" />
-  <%= stylesheet_link_tag 'mobile_style' %>
-  <%= javascript_include_tag 'prototype' %>
-
-  <script language="javascript" type="text/javascript">
-    Event.observe(window, 'load', function() {
-      setTimeout(hideURLbar, 0); 
-
-      if(e = $$('a.random')[0]) {
-        Event.observe(e, 'touchstart', lightRow);
-        Event.observe(e, 'touchend', unLightRow);
-      }
-      if(e = $$('a.paste')[0]) {
-        Event.observe(e, 'touchstart', lightRow);
-        Event.observe(e, 'touchend', unLightRow);
-      }
-    });
-    //addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false);
-
-    function hideURLbar() {
-      window.scrollTo(0,1);
-    }
-
-    function lightRow(e) {
-      elm = Event.element(e);
-      elm.style.backgroundColor = '#1F55C3';
-      elm.style.color = 'white';
-    }
-
-    function unLightRow(e) {
-      elm = Event.element(e);
-      elm.style.backgroundColor = 'white';
-      elm.style.color = 'black';
-    }
-  </script>
-
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  <meta name="apple-touch-fullscreen" content="YES" />
+  <%= stylesheet_link_tag 'iui' %>
+  <%= javascript_include_tag 'iui' %>
 	<title>Pastehost</title>
 </head>
 
 <body>
-  <h1>
-    <a href="/"><span>Pastehost!</span></a>
-    <a href="#" onclick="$(this).up('form').submit(); return false;" class="iphone-button">Save</a>
-  </h1>
-
-  <div id="content_container">
-    <div id="content">
-      <div class="panel">
-        <%= yield %>
-      </div>
+    <div class="toolbar">
+        <h1 id="pageTitle">Pastehost</h1>
+        <a class="button" id="backButton" href="#"></a>
+        <a class="button" href="/paste">Paste</a>
     </div>
-  </div>
 
-  <div id="footer">
-    <p>Site design Copyright (c) 2009 Aaron Bieber</p>
-    <p>User-contributed content is the sole property and responsibility of the contributor or author</p>
-  </div>
+    <%= yield %>
 </body>
 </html>

@@ -1,13 +1,19 @@
 class MainController < ApplicationController
-  #skip_before_filter :set_format, :only => [:paste]
-
 	def view
-    logger.info "VIEW"
-    logger.info request.format
     if not has_code
       redirect_to :controller => 'hello'
+      return
     else
       @paste = Paste.find(:first, :conditions => [ "code = ?", params[:code] ])
+    end
+
+    respond_to do |format|
+      format.html
+      format.iphone do
+        if params[:iui]
+          render :layout => false
+        end
+      end
     end
 	end
 
@@ -32,7 +38,9 @@ class MainController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.iphone
+      format.iphone do
+        render :layout => false
+      end
     end
   end
 

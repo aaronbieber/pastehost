@@ -1,13 +1,20 @@
-<% if @paste.nil? %>
-	<p>That paste wasn't found!</p>
-<% else %>
-  <div id="paste">
-    <%= @paste.paste %>
-  </div>
-  <div id="paste_meta">Pasted <%= @paste.ago %> ago</div>
+<div class="panel" title="View" selected="true">
+  <fieldset>
+    <div class="row">
+      <% if @paste.nil? %>
+        <p>That paste wasn't found!</p>
+      <% else %>
+        <div id="paste">
+          <%= @paste.paste %>
+        </div>
+        <div id="paste_meta">Pasted <%= @paste.ago %> ago</div>
 
-  <div id="button_bar">
-    <a class="random" href="/random"><span>Roll the Dice</span></a>
-    <a class="paste" href="/paste"><span>Paste Something</span></a>
-  </div>
-<% end %>
+        <div id="button_bar">
+          <a class="random" href="/random"><span>Roll the Dice</span></a>
+          <a class="paste" href="/paste"><span>Paste Something</span></a>
+        </div>
+      <% end %>
+    </div>
+  </fieldset>
+
+</div>
